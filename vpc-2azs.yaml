@@ -263,7 +263,7 @@ Resources:
     Type: 'AWS::EC2::NatGateway'
     Properties:
       AllocationId: !GetAtt 'EIPA.AllocationId'
-      SubnetId: !Ref SubnetAPrivate
+      SubnetId: !Ref SubnetAPublic
       Tags:
       - Key: Name
         Value: !Sub '${AWS::StackName}-NGWA'
@@ -281,7 +281,7 @@ Resources:
     Type: 'AWS::EC2::NatGateway'
     Properties:
       AllocationId: !GetAtt 'EIPB.AllocationId'
-      SubnetId: !Ref SubnetBPrivate
+      SubnetId: !Ref SubnetBPublic
       Tags:
       - Key: Name
         Value: !Sub '${AWS::StackName}-NGWB'
